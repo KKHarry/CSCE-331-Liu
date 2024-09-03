@@ -1,0 +1,149 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  padding: 20px;
+}
+
+.rectangle {
+  width: 100%;
+  max-width: 1800px;
+  height: 300px;
+  background: linear-gradient(to bottom, rgb(130, 211, 249), white);
+  position: relative;
+  overflow: visible;
+}
+
+.profile {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  height: 250px;
+  width: auto;
+}
+
+.header {
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  color: white;
+}
+
+.subheader {
+  font-size: 18px;
+  color: white;
+}
+
+#first_p {
+  margin-top: 40px;
+  font-size: 18px;
+  max-width: 800px;
+}
+
+.wrapper {
+  position: relative;
+  color: #6bcbed;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  height: 500px;
+}
+
+.line-area {
+  display: block;
+  width: 70%;
+  height: 5px;
+  background: #31c3eb;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+}
+
+.wrapper .timeline-area {
+  height: 100%;
+}
+
+.single-item {
+  width: 6%;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  margin-right: 70px;
+  transition: width .5s, transform .5s;
+  z-index: 1;
+}
+
+.single-item > span:before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: #31c3eb;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: opacity .3s; 
+}
+
+.single-item:hover > span:before {
+  opacity: 0; 
+}
+
+.img-area {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 100%;
+  transition: transform .5s;
+}
+
+.single-item:hover .img-area {
+  display: block; 
+  transform: translate(-50%, -50%) scale(1.2); 
+}
+
+.img-area a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.img-area a img {
+  border-radius: 50%;
+  max-height: 100%;
+  max-width: 100%;
+  border: 5px solid #fff;
+}
+
+.img-area a span {
+  position: absolute;
+  width: 250%;
+  margin-left: -72%;
+  bottom: -40px;
+  left: 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #000;
+  font-weight: bold;
+}
+
+.img-area a span:after {
+  margin-left: 5px;
+}
+
+.single-item.active {
+  width: 10%;
+}

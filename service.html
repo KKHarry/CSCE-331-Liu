@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Personal Website</title>
+    <link href="./style1.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="rectangle">
+    <h1 class="header">Service</h1>
+    <h2 class="subheader"></h2>
+  </div>
+
+  <div class="wrapper">
+    <div class="timeline-area">
+      <div class="line-area"></div>
+
+      <div class="single-item active">
+        <span>Landing</span>
+        <div class="img-area">
+
+          <a href="landing.html">
+            <img src="image.png" alt="random">
+            <span>Landing</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="single-item active">
+        <span>Qualifications</span>
+        <div class="img-area">
+
+          <a href="qualification.html">
+            <img src="image.png" alt="random">
+            <span>Qualifications</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="single-item active">
+        <span>Technical</span>
+        <div class="img-area">
+
+          <a href="technical.html">
+            <img src="image.png" alt="random">
+            <span>Technical</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="single-item active">
+        <span>Serivce</span>
+        <div class="img-area">
+
+          <a href="service.html">
+            <img src="image.png" alt="random">
+            <span>Service</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="single-item active">
+        <span>AI</span>
+        <div class="img-area">
+
+          <a href="AI.html">
+            <img src="image.png" alt="random">
+            <span>AI</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll(".single-item").forEach(function(item) {
+      item.addEventListener("mouseenter", function() {
+        document.querySelectorAll(".single-item").forEach(function(el) {
+          el.classList.remove("active");
+        });
+        item.classList.add("active");
+      });
+    });
+  </script>
+</body>
